@@ -22,16 +22,4 @@ Each contract illustrates a distinct approach — from pure hash-based Lamport s
 
 ---
 
-## 🧱 Contract Summaries
-
-### 1. `LamportOneTimeWallet.sol`
-A simple **Lamport one-time signature** verifier.  
-Stores 512 public hashes (`bytes32[256][2]`) representing a single-use Lamport keypair.  
-A transaction is executed only if all 256 preimages match the committed public key hashes.
-
-- **Pros:** Fully hash-based, no elliptic curves.
-- **Cons:** One-time use only; large calldata.
-
-#### Example Deployment
-```bash
-forge create LamportOneTimeWallet --constructor-args <lamportPub>
+ 
